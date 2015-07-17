@@ -49,8 +49,10 @@ function tfuse_custom_form(){
 				}
 				
 				
-			   if(jQuery(".ajax_form input, .ajax_form textarea, .ajax_form radio, .ajax_form select").length  == i+1){ 
-					if(my_error == false){
+			   if(jQuery(".ajax_form input, .ajax_form textarea, .ajax_form radio, .ajax_form select").length  == i+1)
+               {
+					if(my_error == false)
+                    {
 						jQuery(".ajax_form").slideUp(400);
 						
 						var $datastring = "ajax=true";
@@ -63,20 +65,56 @@ function tfuse_custom_form(){
 															
 						
 						jQuery(".ajax_form #send").fadeOut(100);	
-
+/*
 						jQuery.ajax({
 						   type: "POST",
 						   url: "./sendmail.php",
 						   data: $datastring,
 						   success: function(response){
 						   jQuery(".ajax_form").before("<div class='ajaxresponse' style='display: none;'></div>");
-						   jQuery(".ajaxresponse").html(response).slideDown(400); 
+						   jQuery(".ajaxresponse").html(response).slideDown(400);
 						   jQuery(".ajax_form #send").fadeIn(400);
 						   jQuery(".ajax_form input, .ajax_form textarea, .ajax_form radio, .ajax_form select").val("");
 							   }
 							});
-						}
+						}*/
 
+                        var contactEmail = jQuery("#contact_email").val(),
+                            contactSubject = jQuery("#contact_subject").val(),
+                            contactMessage = jQuery("#contact_message").val();
+
+
+                        jQuery.ajax({
+                            type: "POST",
+                            url: "https://mandrillapp.com/api/1.0/messages/send.json",
+                            data: {
+                                key: "TzB6J4IM5GWJffuZYg31Gw",
+                                message: {
+                                    from_email: contactEmail,
+                                    to: [
+                                            {
+                                                email: "miguel@chateloin.com",
+                                                name: "Miguel A. Chateloin",
+                                                type: "to"
+                                            }
+
+                                    ],
+                                   autotext: true,
+                                   subject: contactSubject,
+                                   html: contactMessage
+                                }
+                            },
+                            success: function(response){
+                                jQuery(".ajax_form").before("<div class='ajaxresponse' style='display: none;'></div>");
+                                jQuery(".ajaxresponse").html(response).slideDown(400);
+                                jQuery(".ajax_form #send").fadeIn(400);
+                                jQuery(".ajax_form input, .ajax_form textarea, .ajax_form radio, .ajax_form select").val("");
+                            }
+                        }).done(function(response) {
+                            console.log(response); // if you're into that sorta thing
+                        });
+
+                    }
 
 				}
 
