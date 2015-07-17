@@ -11,3 +11,43 @@ style from style.css to this file, and modify it to
 your liking.
 
 */
+
+h2.info {
+    font-size: 5rem;
+}
+
+/*
+p, .work-examples {
+    font-size: 1.3rem !important;
+}
+*/
+
+p.author-remark {
+    font-size: 2rem !important;
+}
+
+#contact_email,
+#contact_subject,
+#contact_textarea {
+    text-transform: none;
+}
+
+
+
+.history,
+.history .services-title,
+.experise,
+.expertise .services-title, .work-examples {
+    text-align: center !important;
+}
+
+
+
+/*
+#home,
+#works,
+#services,
+#about,
+#contact {
+    background-color: #f8f8f8;
+}*/
