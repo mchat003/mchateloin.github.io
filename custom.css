@@ -41,7 +41,9 @@ p.author-remark {
     text-align: center !important;
 }
 
-
+.author-text a {
+    color: rgba(0,0,0,.55);
+}
 
 /*
 #home,
