@@ -1,2 +1,2 @@
-# mchateloin.github.io
-My alternative personal website.
+# My personal website
+Self explanatory.
