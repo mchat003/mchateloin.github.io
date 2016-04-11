@@ -268,10 +268,6 @@
                               <a class="down work-examples-prev" href="#"><span>PREV -</span></a>-->
                           </div>
                       </div>
-                      <div class="clear"></div>
-                      <div class="col-sm-12 carousel-footer">
-                          <a id="hire" class="button green" target="_blank" href="https://www.linkedin.com/in/chateloin"><span>I'm available for hire</span></a>
-                      </div>
                   </div>
               </div>
               <div class="item">
@@ -443,7 +439,6 @@
                     <div class="clear"></div>
 
                     <div class="author-socials pull-left">
-                        <a target="_blank" href="mailto:miguel@chateloin.com" data-toggle="tooltip" title="Send me an email"><img src="images/icons/em_about_ico.png"
                                                                                      alt=""/></a>
                         <a target="_blank" href="http://twitter.com/chateloinus" data-toggle="tooltip" title="Follow me on twitter"><img
                                 src="images/icons/tw_about_ico.png" alt=""/></a>
@@ -471,73 +466,6 @@
             <h5 class="text-orange">Contact</h5>
         </div>
 
-        <div class="row">
-                <div class="col-sm-6">
-                    <div class="contact_form clearfix text-left">
-                        <form action="#" method="POST" id="contact_form" class="ajax_form">
-                            <div class="pull-left field_text">
-                                <label class="label_title" for="contact_email">Email Adress:</label>
-                                <input type="text" name="contact_email" id="contact_email" value="" class="inputField required">
-                                <span id="symbol"></span>
-                            </div>
-                            <div class="pull-left field_select omega">
-                                <label class="label_title" for="contact_subject">Subject:</label>
-                                <input type="text" name="contact_subject" id="contact_subject" value="" class="inputField required">
-                                <span id="symbol"></span>
-
-                                <!--<label class="label_title">Subject:</label>
-                                <select class="select_styled" name="contact_subject" id="contact_subject">
-                                    <option value="1">Can I hire you?</option>
-                                    <option value="2">Let's chat</option>
-                                    <option value="3"></option>
-                                    <option value="3"></option>
-                                </select>-->
-                            </div>
-                            <div class="clear"></div>
-                            <div class="field_textarea">
-                                <label class="label_title" for="contact_textarea">Message:</label>
-                                <textarea cols="30" rows="10" name="contact_message" id="contact_message" class="textareaField" id="contact_textarea"></textarea>
-                            </div>
-                            <div class="field_submit">
-                                <a href="#" class="button orange" id="send"><span>SEND</span></a>
-                                <a onclick="document.getElementById('contact_form').reset();return false;" href="#"
-                                   class="reset_form"><span>Reset fields</span></a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="col-sm-5">
-
-                    <script>
-                        $(window).load(function () {
-                            $("#map1").gMap({
-                                markers: [
-                                    {
-                                        latitude: 25.7753,
-                                        longitude: -80.2089}
-                                ],
-                                zoom: 10,
-                                disableDefaultUI: true
-                            });
-                        });
-                    </script>
-                    <div class="contact_map">
-                        <!-- SVG begins -->
-                        <svg width="100%" height="230px">
-                            <defs>
-                                <mask id="mask" maskUnits="userSpaceOnUse" maskContentUnits="userSpaceOnUse">
-                                    <image width="350px" height="230px" xlink:href="images/polygon.png"></image>
-                                </mask>
-                            </defs>
-                            <foreignObject width="100%" height="230px" style="mask:url(#mask);max-width: 100%">
-                                <div id="map1" class="map frame_box"></div>
-                            </foreignObject>
-                        </svg>
-                        <!-- SVG ends -->
-                        <img src="images/aslanta-line2.png" alt="" class="map-aslant-line"/>
-                    </div>
-                </div>
-            </div>
       </div>
     </div>
   </section>
